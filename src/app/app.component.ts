@@ -3,8 +3,11 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'quete8';
+  onomatopoiaList: Array<String> = ['bouh', 'prout', 'wahouuuuu'];
+  onReceiveNewOnomatopia(event: string): void {
+this.onomatopoiaList.push(event)
+  }
 }
